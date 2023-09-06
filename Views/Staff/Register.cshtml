@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCApp.Models.Register> 
+@{
+    ViewBag.Title = "Register";
+}
+
+<h2>Register</h2>
+
+@foreach(var x in Model)
+{
+    <li>@x.Id</li>
+    <li>@x.Name</li>
+    <li>@x.Address</li>
+}

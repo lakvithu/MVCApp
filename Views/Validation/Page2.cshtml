@@ -1,0 +1,19 @@
+﻿@model MVCApp.Models.Company
+
+@{
+    ViewBag.Title = "Page2";
+}
+
+<h2>Page2</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(m => m.CompanyRegisterId, htmlAttributes: new { @class = "control-label col-md-2" }); <br/>
+    @Html.ValidationMessageFor(m=>m.CompanyRegisterId)
+
+    @Html.TextBoxFor(m => m.CompanyFounder); <br/>
+    @Html.ValidationMessageFor(m => m.CompanyFounder);
+
+    <input type="submit" value="submit" />
+    @Html.ValidationSummary(true)
+}

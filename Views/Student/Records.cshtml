@@ -1,0 +1,26 @@
+﻿@model List<MVCApp.Models.Display>
+
+
+@{
+    ViewBag.Title = "Records";
+}
+
+<h2>Records</h2>
+
+<table style="background-color:bisque" border="1">
+<thead>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Age</th>
+</thead>
+
+@foreach(var x in Model)
+{
+    <tr>
+        <td>@x.studentId</td>
+        <td>@x.studentName</td>
+        <td>@x.studentAge</td>
+    </tr>
+}
+
+</table>

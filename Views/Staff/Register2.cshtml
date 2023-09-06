@@ -1,0 +1,15 @@
+﻿@model MVCApp.Models.Staff
+@{
+    ViewBag.Title = "Register2";
+}
+
+<h2>Register2</h2>
+
+
+@Html.LabelFor(x=>x.StudentId, htmlAttributes: new { @class = "control-label col-md-2" })
+@Html.LabelFor(x=>x.StudentName, htmlAttributes: new { @class = "control-label col-md-2" })
+@Html.TextBoxFor(x=>x.StudentId , new { @class = "form-control" })
+@Html.TextBoxFor(x=>x.StudentName)
+
+<input type="submit" value="submit" />
+

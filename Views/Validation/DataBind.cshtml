@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "DataBind";
+}
+
+
+
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+
+<script>
+    $(document).ready(function () {
+        $('.mysubmit').on('click', function (e) {
+            myURL = "/Validation/ShowData";
+            $.ajax({
+                type: "GET",
+                url: myURL,
+                dataType: 'json',
+
+                success: function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        var opt = new Option(data[i].Address);
+                        $('#lak').append(opt);
+                    }
+                    alert(data[1].Name);
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</head>
+<button type="submit" value="Submit" class="mysubmit">AJAX Get JSON Data</button>
+<select id="lak">
+
+</select>
+
+
+

@@ -1,0 +1,22 @@
+﻿@model MVCApp.Models.Doctor
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+@using (Html.BeginForm())
+
+{
+    
+    @Html.TextBoxFor(d => d.DoctorId ); <br/>
+    @Html.ValidationMessageFor(d => d.DoctorId);
+
+   
+    @Html.TextBoxFor(d => d.DoctorName); <br/>
+    @Html.ValidationMessageFor(d=>d.DoctorName)
+
+    <input type="submit" value="submit" /> 
+    @Html.ValidationSummary(true)
+
+}

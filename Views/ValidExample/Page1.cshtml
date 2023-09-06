@@ -1,0 +1,19 @@
+﻿@model MVCApp.Models.Doctor 
+
+@{
+    ViewBag.Title = "Page1";
+}
+
+<h2>Page1</h2>
+
+@using(Html.BeginForm())
+{
+    @Html.TextBoxFor(m => m.DoctorId); <br/>
+    @Html.ValidationMessageFor(m=>m.DoctorId)
+
+    @Html.TextBoxFor(m => m.Pincode); <br/>
+    @Html.ValidationMessageFor(m=>m.Pincode)
+
+    <input type="submit" value="submit" />
+    @Html.ValidationSummary(true);
+}
